@@ -1,0 +1,29 @@
+
+Project : To develop a Graphic User Interface widget using GTK+ with the aid of Cairo graphics
+Author  : Vivek, 2nd year CS undergraduate,2012 batch , IIT Madras
+
+Description :
+		
+		*	The widget involves in  presenting the system clock in various forms of representation which involve in Binary,Analogue and Digital.
+		* 	It enables the user to select the form of display through "on-click" buttons.		 
+		*  For this seperate variables is set to each button.If a click is made on one the variable corresponding to that button is made as one and 					remaining are set to zero and the display is done usinf a simple cascade of "if" statements
+		*  Binary Clock  : It is handled by passing the hours,minutes and seconds of the system time to a function which decodes them into seperate 					binary digits suitable for representation in binary clock. Since the clock is 24-hour based and maximum of a digit is 9 which is 1001 					in binary only four circles are used in each column. Note that red refers to one and green refers to zero.
+		*  Analogue Clock : This is the tough part as the it involves in rotation. Trig functions are used and the depency of hours hands on 					minutes and seconds is also taken to consideration.You can see the a certain level of detail in the clock as the mark is highlighted at 					every   90 degrees.
+		*  Digital Clock : This is done by cairo by drawing each digit using lines (but a simple function in cairo could be used to do it) 
+
+
+Compiling  :
+
+		* Tested on command line of linux
+		* System requirements gtk libraries of gtk+_3.0 and cairo
+							
+			"	sudo apt-get install libcairo2-dev "
+			"	sudo apt-get install gtk+-3.0      "
+	
+		* Go to the containing folder and make it	
+
+			" cd Desktop/.../present_folder
+			" make
+			" ./a.out
+
+Voila :)
